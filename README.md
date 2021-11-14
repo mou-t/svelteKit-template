@@ -1,17 +1,8 @@
-## Developing
+## 含まれているライブラリ
 
-```bash
-pnpm dev
-
-```
-
-## Building
-
-```bash
-pnpm build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+- tailwind css
+- daisy ui
+- aspida
 
 ## ディレクトリ構成
 

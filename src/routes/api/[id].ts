@@ -1,5 +1,4 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { requestBody, responseBody } from './_[id].type';
 
 export const post: RequestHandler<unknown, requestBody, responseBody> = ({ body, params }) => {
 	const { id: idBody } = body;
@@ -9,4 +8,12 @@ export const post: RequestHandler<unknown, requestBody, responseBody> = ({ body,
 			text: 'params ' + id + ' body ' + idBody.toString() + ' api response '
 		}
 	};
+};
+
+export type requestBody = {
+	id: number;
+};
+
+export type responseBody = {
+	text: string;
 };
