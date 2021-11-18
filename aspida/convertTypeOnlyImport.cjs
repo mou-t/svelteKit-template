@@ -11,6 +11,7 @@ const convertTypeOnlyImport = async filePath => {
   return 0
 }
 
+// example : node path/convertTypeOnlyImport.cjs 'path/$api.ts'
 convertTypeOnlyImport(process.argv[2])
   .then(() => {
     console.log('Success')
