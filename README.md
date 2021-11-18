@@ -23,4 +23,4 @@
 
 ## ファイル
 
-- scripts/dot-html.bash : /\*.html/index.html to /\*.html
+- scripts/dot-html.bash : /\*.html/index.html to /\*.html adapter-static アダプタのみ
