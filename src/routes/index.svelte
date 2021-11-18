@@ -1,8 +1,10 @@
 <script lang="ts" context="module">
 	import type { Load } from '@sveltejs/kit';
-	import { client } from '$lib/client';
-	export const load: Load = async () => {
-		const res = await client._id(1).$post({ body: { id: 11 } });
+	import { client } from '$lib/utils/client';
+	export const load: Load = async ({ fetch }) => {
+		const res = await client(fetch)
+			._id(1)
+			.$post({ body: { id: 11 } });
 		return {
 			props: {
 				apiRes: res.text
@@ -16,7 +18,7 @@
 	let body: number = 1;
 	let params: number = 11;
 	const updateApiRes = async (body: number, params: number) => {
-		apiRes = await client
+		apiRes = await client()
 			._id(params)
 			.$post({ body: { id: body } })
 			.then((r) => r.text);
