@@ -3,8 +3,8 @@
 	import { client } from '$lib/utils/client';
 	export const load: Load = async ({ fetch }) => {
 		const res = await client(fetch)
-			._id(1)
-			.$post({ body: { id: 11 } });
+			._id(11)
+			.$post({ body: { id: 'aaa' } });
 		return {
 			props: {
 				apiRes: res.text
@@ -17,13 +17,12 @@
 	export let apiRes: string;
 	let body: number = 1;
 	let params: number = 11;
-	const updateApiRes = async (body: number, params: number) => {
+	async function updateApiRes(body: number, params: number) {
 		apiRes = await client()
 			._id(params)
-			.$post({ body: { id: body } })
+			.$post({ body: { id: body.toString() } })
 			.then((r) => r.text);
-	};
-	$: updateApiRes(body, params);
+	}
 </script>
 
 <h1 class="text-3xl">Welcome to SvelteKit</h1>
@@ -44,3 +43,12 @@
 	</label>
 	<input type="number" bind:value={params} class="input" id="params-id" />
 </div>
+
+<button
+	class="btn"
+	on:click={() => {
+		updateApiRes(body, params);
+	}}
+>
+	api request
+</button>

@@ -5,13 +5,13 @@ export const post: RequestHandler<unknown, requestBody, responseBody> = ({ body,
 	const { id } = params;
 	return {
 		body: {
-			text: 'params ' + id + ' body ' + idBody.toString() + ' api response '
+			text: 'params ' + id + ' body ' + idBody + ' api response '
 		}
 	};
 };
 
 export type requestBody = {
-	id: number;
+	id: string;
 };
 
 export type responseBody = {
