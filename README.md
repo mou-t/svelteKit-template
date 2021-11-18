@@ -3,6 +3,7 @@
 - tailwind css
 - daisy ui
 - aspida
+- husky
 
 ## ディレクトリ構成
 
@@ -19,3 +20,7 @@
 - components/templates ：繰り返しコンポーネントの wrap
 
 [参考](https://www.wantedly.com/companies/noschool/post_articles/308035)
+
+## ファイル
+
+- scripts/dot-html.bash : /\*.html/index.html to /\*.html
