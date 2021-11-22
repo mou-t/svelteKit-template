@@ -1,6 +1,6 @@
 import aspida from '@aspida/fetch';
 import type { FetchConfig } from '@aspida/fetch';
-import api from '../../../aspida/$api';
+import api from '../../aspida/$api';
 
 const fetchConfig: FetchConfig = {
 	baseURL: '/api',

@@ -1,1 +1,1 @@
-module.exports = { input: 'aspida' };
+module.exports = { input: 'src/aspida' };

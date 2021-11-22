@@ -1,4 +1,4 @@
-import type { requestBody, responseBody } from '../../src/routes/api/[id]'
+import type { requestBody, responseBody } from '../../routes/api/[id]'
 
 export type Methods = {
   post: {

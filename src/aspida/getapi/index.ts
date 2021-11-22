@@ -1,4 +1,4 @@
-import type { ResponseBody } from '../../src/routes/api/getapi'
+import type { ResponseBody } from '../../routes/api/getapi'
 
 export type Methods = {
   get: {
