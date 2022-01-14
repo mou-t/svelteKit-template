@@ -11,7 +11,7 @@
 
 - components/materials : アイコンやバナー、SNS シェアボタン
 
-- components/objects 　：ドメインオブジェクト
+- components/objects ：ドメインオブジェクト
 
 - components/pages : ページコンポーネント
 
